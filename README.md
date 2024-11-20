@@ -1,4 +1,3 @@
 # portfolio
 
-personal website
 
