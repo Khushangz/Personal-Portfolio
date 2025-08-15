@@ -17,12 +17,28 @@
     /> -->
 </head>
 <style>
-  body {
+  /* Professional, subtle gradient background (no animation) */
+  :root{
+    --bg-start: #0b1220;   /* deep navy */
+    --bg-end:   #111827;   /* slate */
+  }
 
-  background-image: url("img/bg.gif");
-  
-}
+  body{
+    background: linear-gradient(180deg, var(--bg-start), var(--bg-end));
+    background-attachment: fixed;   /* prevents scroll jank */
+    color: #E5E7EB;                 /* ensures good contrast on dark bg */
+  }
+
+  /* Optional: make white cards stand out slightly if your CSS uses them */
+  .portfolio-item,
+  .about-img .img-box,
+  .home-img .img-box{
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(2px);
+    border-radius: 14px;
+  }
 </style>
+
 <body>
   <!-- Page Loader Start -->
   <div class="page-loader">
