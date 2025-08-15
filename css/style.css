@@ -671,6 +671,10 @@ button {
 .portfolio-section {
   padding-bottom: 50px;
 }
+.portfolio-section .row {
+  align-items: stretch; /* make all items in a row equal height */
+}
+
 
 .portfolio-item {
   display: flex;
@@ -680,10 +684,20 @@ button {
   background: rgba(255,255,255,0.05);
   border-radius: 10px;
   padding: 12px;
-
   width: calc((100% / 3) - 30px);
   margin: 0 15px 30px;
 }
+
+.portfolio-item-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.portfolio-item .view-project-btn {
+  margin-top: auto;
+}
+
 
 
 .portfolio-item-title {
