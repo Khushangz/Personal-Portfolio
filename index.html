@@ -484,23 +484,23 @@
           <!-- Portfolio Item Start -->
           <div class="portfolio-item">
             <div class="portfolio-item-thumbnail">
-              <img src="img/portfolio/img6.png" alt="portfolio item thumbnail" />
+              <img src="img/portfolio/RAG.jpeg" alt="portfolio item thumbnail" />
             </div>
-            <h3 class="portfolio-item-title">Vision Classify</h3>
+            <h3 class="portfolio-item-title">PaperMind</h3>
             <button type="button" class="btn view-project-btn">
               View Project
             </button>
             <div class="portfolio-item-details">
               <div class="description">
                 <p>
-                  Leveraged PyTorch to build CNN model from scratch to classify images into streets, forests, and mountains with 90% accuracy
+                  The RAG-Multimodal Research Paper Retrieval & Summarization Pipeline is an end-to-end, LLM-driven system for high-precision academic literature discovery and synthesis, leveraging SentenceTransformer embeddings (all-MiniLM-L6-v2 / all-mpnet-base-v2) to semantically encode abstracts and full-text chunks, stored in a FAISS vector index for ultra-fast ANN retrieval. It operates in two stages: Stage 1 indexes pre-cleaned metadata (metadata.json), generates synthetic query-aligned abstracts with OllamaLLM or ChatOpenAI, and retrieves the top-K relevant papers; Stage 2 extracts and chunks full PDF content, embeds them into FAISS for document-level search, and uses DeepSeek or GPT-4-Turbo to generate structured workflows for multi-step research planning. The pipeline includes robust evaluation modules—Ragas aspect critics for factual faithfulness, OpenAI-based context–summary alignment scoring, hybrid QA + embedding similarity checks to validate key research slots (task, domain, model, goal), and T5 log-probability scoring for slot-level truthfulness—enabling scalable, multimodal retrieval-augmented generation that delivers concise, query-specific research insights with measurable alignment to source material.
                 </p>
               </div>
               <div class="general-info">
                 <ul>
                   <li>Created - <span>April 2024</span></li>
                   <li>
-                    Tech Stack - <span> Pytorch, Pandas, Numpy, Python </span>
+                    Tech Stack - <span>Python, FAISS, SentenceTransformers, Hugging Face Transformers, LangChain, OpenAI GPT-4-Turbo, OllamaLLM, DeepSeek LLM, Ragas, PyTorch, scikit-learn, Pandas, PyMuPDF, JSON</span>
                   </li>
                 </ul>
                 <button type="button" class="btn view-project-btn">
