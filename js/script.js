@@ -16,8 +16,12 @@ navToggler.addEventListener("click", () => {
   document.body.classList.toggle("hide-scrolling");
 });
 function hideSection() {
-  document.querySelector("section.active").classList.toggle("fade-out");
+  const activeSection = document.querySelector("section.active");
+  if (activeSection) {
+    activeSection.classList.toggle("fade-out");
+  }
 }
+
 function toggleNavbar() {
   document.querySelector(".header").classList.toggle("active");
 }
@@ -68,12 +72,16 @@ tabsContainer.addEventListener("click", (e) => {
 
 // Portfolio Item Details
 document.addEventListener("click", (e) => {
-  if (e.target.classList.contains("view-project-btn")) {
+  if (e.target.classList.contains("view-project-btn") && !e.target.disabled) {
+    e.target.disabled = true; // prevent double triggering
     togglePortfolioPopup();
     document.querySelector(".portfolio-popup").scrollTo(0, 0);
     portfolioItemDetails(e.target.parentElement);
+
+    setTimeout(() => (e.target.disabled = false), 400);
   }
 });
+
 function togglePortfolioPopup() {
   document.querySelector(".portfolio-popup").classList.toggle("open");
   document.body.classList.toggle("hide-scrolling");
